@@ -20,7 +20,7 @@ const HomePage = () => {
 
         <p className={styles.description}>This is the landing page.</p>
 
-        <Link href="/login">
+        <Link href="/login" passHref>
           <Button variant="primary">Login</Button>
         </Link>
       </main>
