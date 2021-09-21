@@ -35,9 +35,19 @@ const options = {
   },
   callbacks: {
     session: async (session, user) => {
+<<<<<<< HEAD
       session.jwt = user.jwt;
       session.id = user.id;
       return Promise.resolve(session);
+=======
+      console.log("session", {
+        jwt: user.jwt,
+        id: user.id,
+      })
+      session.jwt = user.jwt
+      session.id = user.id
+      return Promise.resolve(session)
+>>>>>>> 97b6aef (cookie test - prettier fix)
     },
     jwt: async (token, user, account) => {
       const isSignIn = user ? true : false;
@@ -52,11 +62,25 @@ const options = {
         );
         const data = await response.json();
 
+<<<<<<< HEAD
         token.jwt = data.jwt;
         token.id = data.user.id;
       }
 
       return Promise.resolve(token);
+=======
+        console.log("jwt", {
+          jwt: data.jwt,
+          id: data.id,
+        })
+
+        token.jwt = data.jwt
+        token.id = data.user.id
+      }
+
+      console.log("jwt", {isSignIn})
+      return Promise.resolve(token)
+>>>>>>> 97b6aef (cookie test - prettier fix)
     },
   },
   pages: {
