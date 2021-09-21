@@ -78,7 +78,7 @@ const options = {
         token.id = data.user.id
       }
 
-      console.log("jwt", {isSignIn})
+      console.log("jwt", { isSignIn })
       return Promise.resolve(token)
 >>>>>>> 97b6aef (cookie test - prettier fix)
     },
