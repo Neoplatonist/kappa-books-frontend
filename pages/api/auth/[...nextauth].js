@@ -18,6 +18,9 @@ const options = {
     database: process.env.NEXT_PUBLIC_DATABASE_NAME,
     synchronize: true,
   },
+  cookies: {
+    domain: ".cuppakappa.studio",
+  },
   session: {
     jwt: true,
   },
