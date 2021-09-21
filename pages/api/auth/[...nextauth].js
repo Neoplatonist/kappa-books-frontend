@@ -1,10 +1,6 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 
-const useSecureCookies = process.env.NEXTAUTH_URL.startsWith('https://')
-const cookiePrefix = useSecureCookies ? '__Secure-' : ''
-const hostName = Url(process.env.NEXTAUTH_URL).hostname
-
 const options = {
   providers: [
     Providers.Google({
@@ -24,13 +20,13 @@ const options = {
   },
   cookies: {
     sessionToken: {
-      name: `${cookiePrefix}next-auth.session-token`,
+      name: `__Secure-next-auth.session-token`,
       options: {
         httpOnly: true,
         sameSite: "lax",
         path: "/",
-        secure: useSecureCookies,
-        domain: hostName == "localhost" ? hostName : "." + hostName, // add a . in front so that subdomains are included
+        secure: true,
+        domain: ".cuppakappa.studio"
       },
     },
   },
