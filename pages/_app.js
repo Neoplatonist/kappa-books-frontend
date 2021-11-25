@@ -1,10 +1,11 @@
-import App from "next/app"
-import Head from "next/head"
-import Layout from "../components/Layout"
-import { getCategories } from "../utils/api"
+import App from "next/app";
+import Head from "next/head";
+import Layout from "../components/Layout";
+import { getCategories } from "../utils/api";
 
-import "bootstrap/dist/css/bootstrap.css"
-import "../styles/globals.css"
+import "bootstrap/dist/css/bootstrap.css";
+import "../styles/globals.css";
+import "../styles/Home.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -13,8 +14,8 @@ const MyApp = ({ Component, pageProps }) => {
 
       <Component {...pageProps} />
     </Layout>
-  )
-}
+  );
+};
 
 // getInitialProps disables automatic static optimization for pages that don't
 // have getStaticProps. So [[...slug]] pages still get SSG.
@@ -22,11 +23,11 @@ const MyApp = ({ Component, pageProps }) => {
 // https://github.com/vercel/next.js/discussions/10949
 MyApp.getInitialProps = async (ctx) => {
   // Calls page's `getInitialProps` and fills `appProps.pageProps`
-  const appProps = await App.getInitialProps(ctx)
+  const appProps = await App.getInitialProps(ctx);
   // Fetch global site settings from Strapi
-  const categories = await getCategories()
+  const categories = await getCategories();
   // Pass the data to our page via props
-  return { ...appProps, pageProps: { categories, path: ctx.pathname } }
-}
+  return { ...appProps, pageProps: { categories, path: ctx.pathname } };
+};
 
-export default MyApp
+export default MyApp;

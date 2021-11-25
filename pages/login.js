@@ -1,17 +1,17 @@
-import Head from "next/head"
-import Link from "next/link"
-import { getProviders, getSession, signIn, signOut } from "next-auth/client"
-import { Card, Col, Container, Row } from "react-bootstrap"
+import Head from "next/head";
+import Link from "next/link";
+import { getProviders, getSession, signIn, signOut } from "next-auth/client";
+import { Card, Col, Container, Row } from "react-bootstrap";
 
 const signInButtonNode = (provider) => {
   const handleSignIn = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     // signIn('google', { callbackUrl: '/dashboard' })
-    console.log(provider.id)
+    console.log(provider.id);
     signIn(provider.id, {
       callbackUrl: `${window.location.origin}/dashboard`,
-    })
-  }
+    });
+  };
 
   return (
     <div key={provider.id}>
@@ -19,14 +19,14 @@ const signInButtonNode = (provider) => {
         <button onClick={handleSignIn}>Sign In with {provider.name}</button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
 const signOutButtonNode = () => {
   const handleSignOut = (e) => {
-    e.preventDefault()
-    signOut({ callbackUrl: "/" })
-  }
+    e.preventDefault();
+    signOut({ callbackUrl: "/" });
+  };
 
   return (
     <div>
@@ -34,18 +34,18 @@ const signOutButtonNode = () => {
         <button onClick={handleSignOut}>Sign Out</button>
       </Link>
     </div>
-  )
-}
+  );
+};
 
 const unauthorized = () => {
   return (
     <div className="text">You aren&apos;t authorized to view this page</div>
-  )
-}
+  );
+};
 
 const authorized = () => {
-  return <div className="text">Hello world</div>
-}
+  return <div className="text">Hello world</div>;
+};
 
 const LoginPage = ({ session, providers }) => {
   return (
@@ -90,26 +90,26 @@ const LoginPage = ({ session, providers }) => {
               {session
                 ? signOutButtonNode()
                 : Object.values(providers).map((provider) =>
-                    signInButtonNode(provider)
-                  )}
+                  signInButtonNode(provider)
+                )}
             </Card.Body>
           </Card>
         </Col>
       </Row>
     </Container>
-  )
-}
+  );
+};
 
 export const getServerSideProps = async (ctx) => {
-  const session = await getSession(ctx)
-  const providers = await getProviders()
+  const session = await getSession(ctx);
+  const providers = await getProviders();
 
   return {
     props: {
       session,
       providers,
     },
-  }
-}
+  };
+};
 
-export default LoginPage
+export default LoginPage;

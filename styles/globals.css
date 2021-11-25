@@ -1,6 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --var-min-width: 400px;
+  --var-max-width: 1920px;
+}
+
+body {
+  min-width: var(--var-min-width);
+  font-family: "Prompt", sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
+/*
+body {
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  color: black;
+  overflow-x: hidden;
+}
+
 .container {
   min-height: 90vh;
-  /* padding: 0 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +32,6 @@
 }
 
 .main {
-  /* padding: 5rem 0; */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -79,8 +101,6 @@
 }
 
 .card {
-  /* margin: 1rem; */
-  /* padding: 1.5rem; */
   text-align: left;
   color: inherit;
   text-decoration: none;
@@ -118,4 +138,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */

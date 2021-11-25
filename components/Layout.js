@@ -1,10 +1,17 @@
-import { Col, Container, Row } from "react-bootstrap"
-import Footer from "./Footer"
-import Navbar from "./Navbar"
+import { Fragment } from "react";
+// import { Col, Container, Row } from "react-bootstrap";
+// import Footer from "./Footer";
+// import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (
-    <Container fluid>
+    <Fragment>
+      {children}
+    </Fragment>
+  );
+};
+
+{/* <Container fluid>
       <Row>
         <Navbar />
 
@@ -12,8 +19,6 @@ const Layout = ({ children }) => {
 
         <Footer />
       </Row>
-    </Container>
-  )
-}
+    </Container> */}
 
-export default Layout
+export default Layout;
