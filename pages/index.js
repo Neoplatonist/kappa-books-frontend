@@ -1,10 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import Nav from "../components/Nav";
-import { Button } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import 'tailwindcss/tailwind.css';
 
 const HomePage = () => {
@@ -25,22 +21,22 @@ const HomePage = () => {
 
           <picture className="c-header-glyphs__01">
             <source srcSet="/images/ellipse-3.webp" type="image/webp" />
-            <Image src="/images/ellipse-3.svg" alt="Interactive Stories Picture" />
+            <img src="/images/ellipse-3.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__02">
             <source srcSet="/images/ellipse-5.webp" type="image/webp" />
-            <Image src="/images/ellipse-5.svg" alt="Interactive Stories Picture" />
+            <img src="/images/ellipse-5.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__03">
             <source srcSet="/images/ellipse-2.webp" type="image/webp" />
-            <Image src="/images/ellipse-2.svg" alt="Interactive Stories Picture" />
+            <img src="/images/ellipse-2.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__04">
             <source srcSet="/images/group-2.webp" type="image/webp" />
-            <Image src="/images/group-2.svg" alt="Interactive Stories Picture" />
+            <img src="/images/group-2.svg" alt="Interactive Stories Picture" />
           </picture>
         </div>
       </header>
@@ -52,10 +48,10 @@ const HomePage = () => {
           <ul className="l-about-list">
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__Image">
+                <picture className="c-about-figure__img">
                   <source srcSet="/images/image-1.webp" type="image/webp" />
                   <source srcSet="/images/image-1.png" type="image/png" />
-                  <Image src="/images/image-1.png" alt="Interactive Stories Picture" />
+                  <img src="/images/image-1.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">
@@ -66,10 +62,10 @@ const HomePage = () => {
 
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__Image">
+                <picture className="c-about-figure__img">
                   <source srcSet="/images/image-2.webp" type="image/webp" />
                   <source srcSet="/images/image-2.png" type="image/png" />
-                  <Image src="/images/image-2.png" alt="Interactive Stories Picture" />
+                  <img src="/images/image-2.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">
@@ -80,10 +76,10 @@ const HomePage = () => {
 
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__Image">
+                <picture className="c-about-figure__img">
                   <source srcSet="/images/image-3.webp" type="image/webp" />
                   <source srcSet="/images/image-3.png" type="image/png" />
-                  <Image src="/images/image-3.png" alt="Interactive Stories Picture" />
+                  <img src="/images/image-3.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">
@@ -128,7 +124,7 @@ const HomePage = () => {
           <Button variant="primary">Login</Button>
         </Link>
       </main> */}
-    </Fragment>
+    </Fragment >
   );
 };
 
