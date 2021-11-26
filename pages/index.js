@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import Link from "next/link";
+import Image from "next/image";
 import Nav from "../components/Nav";
 import { Button } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,18 +12,6 @@ const HomePage = () => {
     <Fragment>
       <Head>
         <title>Kappa Books</title>
-
-        <meta
-          name="description"
-          content="A library of interactive books for ESL"
-        />
-
-        <link rel="icon" href="/favicon.ico" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&family=Mulish:wght@200;300;400&display=swap"
-          rel="stylesheet" />
       </Head>
 
       <header className="l-header">
@@ -37,22 +25,22 @@ const HomePage = () => {
 
           <picture className="c-header-glyphs__01">
             <source srcSet="/images/ellipse-3.webp" type="image/webp" />
-            <img src="/images/ellipse-3.svg" alt="Interactive Stories Picture" />
+            <Image src="/images/ellipse-3.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__02">
             <source srcSet="/images/ellipse-5.webp" type="image/webp" />
-            <img src="/images/ellipse-5.svg" alt="Interactive Stories Picture" />
+            <Image src="/images/ellipse-5.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__03">
             <source srcSet="/images/ellipse-2.webp" type="image/webp" />
-            <img src="/images/ellipse-2.svg" alt="Interactive Stories Picture" />
+            <Image src="/images/ellipse-2.svg" alt="Interactive Stories Picture" />
           </picture>
 
           <picture className="c-header-glyphs__04">
             <source srcSet="/images/group-2.webp" type="image/webp" />
-            <img src="/images/group-2.svg" alt="Interactive Stories Picture" />
+            <Image src="/images/group-2.svg" alt="Interactive Stories Picture" />
           </picture>
         </div>
       </header>
@@ -64,10 +52,10 @@ const HomePage = () => {
           <ul className="l-about-list">
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__img">
+                <picture className="c-about-figure__Image">
                   <source srcSet="/images/image-1.webp" type="image/webp" />
                   <source srcSet="/images/image-1.png" type="image/png" />
-                  <img src="/images/image-1.png" alt="Interactive Stories Picture" />
+                  <Image src="/images/image-1.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">
@@ -78,10 +66,10 @@ const HomePage = () => {
 
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__img">
+                <picture className="c-about-figure__Image">
                   <source srcSet="/images/image-2.webp" type="image/webp" />
                   <source srcSet="/images/image-2.png" type="image/png" />
-                  <img src="/images/image-2.png" alt="Interactive Stories Picture" />
+                  <Image src="/images/image-2.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">
@@ -92,10 +80,10 @@ const HomePage = () => {
 
             <li className="l-about-list__item">
               <figure className="c-about-figure">
-                <picture className="c-about-figure__img">
+                <picture className="c-about-figure__Image">
                   <source srcSet="/images/image-3.webp" type="image/webp" />
                   <source srcSet="/images/image-3.png" type="image/png" />
-                  <img src="/images/image-3.png" alt="Interactive Stories Picture" />
+                  <Image src="/images/image-3.png" alt="Interactive Stories Picture" />
                 </picture>
 
                 <figurecaption className="c-about-figure__caption">

@@ -10,7 +10,21 @@ import "../styles/Home.css";
 const MyApp = ({ Component, pageProps }) => {
   return (
     <Layout categories={pageProps.categories}>
-      <Head>{/* Put head Links and Scripts here */}</Head>
+      <Head>
+        <title>Kappa Books</title>
+
+        <meta
+          name="description"
+          content="A library of interactive books for ESL"
+        />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@500&family=Mulish:wght@200;300;400&display=swap"
+          rel="stylesheet" />
+      </Head>
 
       <Component {...pageProps} />
     </Layout>

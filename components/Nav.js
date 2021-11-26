@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,9 +13,12 @@ function Nav() {
 
   return (
     <nav className="l-header__nav">
-      <a href="/" className="c-logo">
-        Logo Here
-      </a>
+      <Link href="/">
+        <a className="c-logo">
+          Logo Here
+        </a>
+      </Link>
+
 
       <div className="l-header-mobile__wrapper">
         <button
@@ -39,11 +43,15 @@ function Nav() {
 
         <ul className={["l-nav-list", mobileNavClass].join(" ")}>
           <li className="l-nav-list__item c-nav">
-            <a href="/login" className="c-nav__link">Log in</a>
+            <Link href="/login">
+              <a className="c-nav__link">Log in</a>
+            </Link>
           </li>
 
           <li className="l-nav-list__item c-nav">
-            <a href="/register" className="c-nav__link">Register</a>
+            <Link href="/register">
+              <a className="c-nav__link">Register</a>
+            </Link>
           </li>
         </ul>
       </div>
